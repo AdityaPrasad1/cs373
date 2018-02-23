@@ -33,11 +33,6 @@ class range_iterator_1 {
         ++this.b;
         return n;}}
 
-function* range_iterator_2 (b, e) {
-    while (b != e) {
-        yield b;
-        ++b;}}
-
 describe('RangeIterator',
     function () {
         let a;
@@ -46,7 +41,6 @@ describe('RangeIterator',
             a = [
                 (b, e) => {
                     return new range_iterator_1(b, e);},
-                range_iterator_2,
                 (b, e) => {
                     const x = _.range(b, e);
                     return x[Symbol.iterator]();}];});
