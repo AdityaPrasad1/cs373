@@ -1,0 +1,47 @@
+language: python
+
+python:
+   - "3.6"
+
+before_install:
+    - cat .travis.yml
+    - npm update -g
+    - pip install --upgrade pip
+
+install:
+    - npm install -g istanbul
+    - npm install -g jshint
+    - npm install -g mocha
+    - npm install lodash
+    - pip install autopep8
+    - pip install coverage
+    - pip install mypy
+    - pip install numpy
+    - pip install pylint
+    - pip list
+
+before_script:
+    - date
+    - uname -a
+    - printenv | sort
+    - autopep8  --version
+    - coverage  --version
+    - git       --version
+    - istanbul  help
+    - java      -version
+    - javac     -version
+    - jshint    --version
+    - make      --version
+    - mypy      --version
+    - node      --version
+    - npm       --version
+    - pip       --version
+    - pydoc     --version
+    - pylint    --version
+    - python    --version
+    - ls -al
+    - cat makefile
+    - cat projects/collatz/makefile
+
+script:
+    - make travis
