@@ -17,7 +17,7 @@ docker:
 	docker run -it -v $(PWD):/usr/cs373 -w /usr/cs373 gpdowning/python
 
 init:
-	touch README
+	touch  README
 	git init
 	git add README
 	git commit -m 'first commit'
