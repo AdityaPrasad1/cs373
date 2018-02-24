@@ -20,21 +20,45 @@ const assert   = require('assert');
 const _        = require('lodash');
 const readline = require('readline');
 
-class my_range_1 {
+class my_range_iterator_1 {
     constructor (b, e) {
         this.b = b;
         this.e = e;}
 
-    * [Symbol.iterator] () {
-        let b = this.b;
-        while (b != this.e) {
-            yield b;
-            ++b;}}}
+    [Symbol.iterator] () {
+        return this;}
+
+    next () {
+        let n = {"value": this.b, "done": (this.b == this.e)};
+        ++this.b;
+        return n;}}
+
+class my_range_1 {
+    constructor (b, e) {
+        let self = this;
+        this.b = b;
+        this.e = e;
+        let h = {
+            get (x, v) {
+                if (v in x)
+                    return x[v];
+                return self.b + parseInt(v);}};
+        return new Proxy(this, h);}
+
+    [Symbol.iterator] () {
+        return new my_range_iterator_1(this.b, this.e);}}
 
 class my_range_2 {
     constructor (b, e) {
+        let self = this;
         this.b = b;
-        this.e = e;}
+        this.e = e;
+        let h = {
+            get (x, v) {
+                if (v in x)
+                    return x[v];
+                return self.b + parseInt(v);}};
+        return new Proxy(this, h);}
 
     * [Symbol.iterator] () {
         let b = this.b;
@@ -42,7 +66,7 @@ class my_range_2 {
             yield b;
             ++b;}}}
 
-describe('reduce',
+describe('Range',
     function () {
         let a;
 
