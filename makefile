@@ -83,6 +83,7 @@ sync:
     --include "RangeIteratorT.py"          \
     --include "Yield.py"                   \
     --include "Range.py"                   \
+    --include "RangeT.py"                  \
     --include "Comprehensions.py"          \
     --include "Map.py"                     \
     --exclude "*"                          \
@@ -109,6 +110,7 @@ sync:
     --include "RangeIteratorT.js"          \
     --include "Yield.js"                   \
     --include "Range.js"                   \
+    --include "RangeT.js"                  \
     --exclude "*"                          \
     ../../examples/javascript/ examples
 	@rsync -r -t -u -v --delete            \

@@ -29,9 +29,14 @@ class range_iterator_1 {
         return this;}
 
     next () {
-        var n = {"value": this.b, "done": (this.b == this.e)};
+        let n = {"value": this.b, "done": (this.b == this.e)};
         ++this.b;
         return n;}}
+
+function* range_iterator_2 (b, e) {
+    while (b != e) {
+        yield b;
+        ++b;}}
 
 describe('RangeIterator',
     function () {
@@ -41,6 +46,7 @@ describe('RangeIterator',
             a = [
                 (b, e) => {
                     return new range_iterator_1(b, e);},
+                range_iterator_2,
                 (b, e) => {
                     const x = _.range(b, e);
                     return x[Symbol.iterator]();}];});
