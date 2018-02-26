@@ -35,10 +35,10 @@ class my_range_iterator_1 {
 
 class my_range_1 {
     constructor (b, e) {
-        let self = this;
+        const self = this;
         this.b = b;
         this.e = e;
-        let h = {
+        const h = {
             get (x, v) {
                 if (v in x)
                     return x[v];
@@ -50,10 +50,10 @@ class my_range_1 {
 
 class my_range_2 {
     constructor (b, e) {
-        let self = this;
+        const self = this;
         this.b = b;
         this.e = e;
-        let h = {
+        const h = {
             get (x, v) {
                 if (v in x)
                     return x[v];

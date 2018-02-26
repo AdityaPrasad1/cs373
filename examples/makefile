@@ -15,7 +15,9 @@ JSFILES :=                  \
     RangeIterator           \
     RangeIteratorT          \
     Yield                   \
-    Range
+    Range                   \
+    RangeT                  \
+    Map
 
 PFILES :=                   \
     Hello                   \
@@ -37,7 +39,9 @@ PFILES :=                   \
     RangeIteratorT          \
     Yield                   \
     Range                   \
-    Comprehensions
+    RangeT                  \
+    Comprehensions          \
+    Map
 
 %.jsx: %.js
 	-jshint $<
