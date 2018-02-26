@@ -10,125 +10,125 @@
 # Indexables.py
 # -------------
 
-// https://docs.python.org/3.6/tutorial/datastructures.html
+# https://docs.python.org/3.6/tutorial/datastructures.html
 
 from types import GeneratorType
 
 def test1 () :
-    x = [2, 3, 4]
-    y = []
-    for v in x :
-        y += [v * 5]
-    assert isinstance(y, list)
-    assert x == [ 2,  3,  4]
-    assert y == [10, 15, 20]
+    a = [2, 3, 4]
+    b = []
+    for v in a :
+        b += [v * v]
+    assert isinstance(b, list)
+    assert a == [2, 3,  4]
+    assert b == [4, 9, 16]
 
 def test2 () :
-    x = [2, 3, 4]
-    y = [v * 5 for v in x]            # list comprehension
-    assert isinstance(y, list)
-    assert x == [2,   3,  4]
-    assert y == [10, 15, 20]
+    a = [2, 3, 4]
+    b = [v * v for v in a]     # list comprehension
+    assert isinstance(b, list)
+    assert a == [2, 3,  4]
+    assert b == [4, 9, 16]
 
 def test3 () :
-    x = [2, 3, 4]
-    g = (v * 5 for v in x)              # generator
+    a = [2, 3, 4]
+    g = (v * v for v in a)              # generator
     assert isinstance(g, GeneratorType)
     assert hasattr(g, "__next__")
     assert hasattr(g, "__iter__")
-    assert x       == [2,   3,  4]
-    assert list(g) == [10, 15, 20]
+    assert a       == [2, 3,  4]
+    assert list(g) == [4, 9, 16]
     assert list(g) == []
 
 def test4 () :
-    x = [2, 3, 4]
-    m = map(lambda v : v * 5, x)
+    a = [2, 3, 4]
+    m = map(lambda v : v * v, a)
     assert hasattr(m, "__next__")
     assert hasattr(m, "__iter__")
-    assert x       == [2,   3,  4]
-    assert list(m) == [10, 15, 20]
+    assert a       == [2, 3,  4]
+    assert list(m) == [4, 9, 16]
     assert list(m) == []
 
 def test5 () :
-    x = [2, 3, 4]
-    g = (v * 5 for v in x)
-    x += [5]
-    assert x       == [ 2,  3,  4,  5]
-    assert list(g) == [10, 15, 20, 25]
+    a = [2, 3, 4]
+    g = (v * v for v in a)
+    a += [5]
+    assert a       == [2, 3,  4,  5]
+    assert list(g) == [4, 9, 16, 25]
     assert list(g) == []
-    x += [5]
+    a += [5]
     assert list(g) == []
 
 def test6 () :
-    x = [2, 3, 4]
-    m = map(lambda v : v * 5, x)
-    x += [5]
-    assert x       == [2,   3,  4,  5]
-    assert list(m) == [10, 15, 20, 25]
+    a = [2, 3, 4]
+    m = map(lambda v : v * v, a)
+    a += [5]
+    assert a       == [2, 3,  4,  5]
+    assert list(m) == [4, 9, 16, 25]
     assert list(m) == []
-    x += [5]
+    a += [5]
     assert list(m) == []
 
 def test7 () :
-    x = [2, 3, 4, 5, 6]
-    y = []
-    for v in x :
+    a = [2, 3, 4, 5, 6]
+    b = []
+    for v in a :
         if v % 2 :
-            y += [v * 5]
-    assert x == [2,  3,  4,  5,  6]
-    assert y == [   15,     25]
+            b += [v * v]
+    assert a == [2, 3, 4,  5,  6]
+    assert b == [   9,    25]
 
 def test8 () :
-    x = [2, 3, 4, 5, 6]
-    y = [v * 5 for v in x if v % 2]
-    assert x == [ 2,  3,  4,  5,  6]
-    assert y == [    15,     25]
+    a = [2, 3, 4, 5, 6]
+    b = [v * v for v in a if v % 2]
+    assert a == [2, 3, 4,  5,  6]
+    assert b == [   9,    25]
 
 def test9 () :
-    x = [2, 3, 4, 5, 6]
-    g = (v * 5 for v in x if v % 2)
-    assert x       == [ 2,  3,  4,  5,  6]
-    assert list(g) == [    15,     25]
+    a = [2, 3, 4, 5, 6]
+    g = (v * v for v in a if v % 2)
+    assert a       == [2, 3, 4,  5,  6]
+    assert list(g) == [   9,    25]
     assert list(g) == []
 
 def test10 () :
-    x = [2, 3, 4, 5, 6]
-    f = filter(lambda v : v % 2, x)
+    a = [2, 3, 4, 5, 6]
+    f = filter(lambda v : v % 2, a)
     assert hasattr(f, "__next__")
     assert hasattr(f, "__iter__")
-    m = map(lambda v : v * 5, f)
-    assert x       == [ 2,  3,  4,  5,  6]
-    assert list(m) == [    15,     25]
+    m = map(lambda v : v * v, f)
+    assert a       == [2, 3, 4,  5,  6]
+    assert list(m) == [   9,    25]
     assert list(f) == []
     assert list(m) == []
 
 def test11 () :
-    x = [2, 3, 4]
-    y = [4, 5]
-    z = []
-    for v in x :
-        for w in y :
-            z += [v + w]
-    assert x == [2, 3, 4]
-    assert y == [4, 5]
-    assert z == [2+4, 2+5, 3+4, 3+5, 4+4, 4+5]
-    assert z == [  6,   7,   7,   8,   8,   9]
+    a = [2, 3, 4]
+    b = [4, 5]
+    c = []
+    for v in a :
+        for w in b :
+            c += [v + w]
+    assert a == [2, 3, 4]
+    assert b == [4, 5]
+    assert c == [2+4, 2+5, 3+4, 3+5, 4+4, 4+5]
+    assert c == [  6,   7,   7,   8,   8,   9]
 
 def test12 () :
-    x = [2, 3, 4]
-    y = [4, 5]
-    z = [v + w for v in x for w in y]
-    assert x == [2, 3, 4]
-    assert y == [4, 5]
-    assert z == [2+4, 2+5, 3+4, 3+5, 4+4, 4+5]
-    assert z == [  6,   7,   7,   8,   8,   9]
+    a = [2, 3, 4]
+    b = [4, 5]
+    c = [v + w for v in a for w in b]
+    assert a == [2, 3, 4]
+    assert b == [4, 5]
+    assert c == [2+4, 2+5, 3+4, 3+5, 4+4, 4+5]
+    assert c == [  6,   7,   7,   8,   8,   9]
 
 def test13 () :
-    x = [2, 3, 4]
-    y = [4, 5]
-    g = (v + w for v in x for w in y)
-    assert x       == [2, 3, 4]
-    assert y       == [4, 5]
+    a = [2, 3, 4]
+    b = [4, 5]
+    g = (v + w for v in a for w in b)
+    assert a       == [2, 3, 4]
+    assert b       == [4, 5]
     assert list(g) == [2+4, 2+5, 3+4, 3+5, 4+4, 4+5]
     assert list(g) == []
 
@@ -163,14 +163,9 @@ def test17 () :
     assert d == {2: "abc",    3: "def",    4: "ghi"}
     assert e == {3: "abcxyz", 4: "defxyz", 5: "ghixyz"}
 
-def test18 () :
-    a = "Nothing to be done."
-    b = [c.lower() for c in a]
-    assert "".join(b) == "nothing to be done."
-
 def main () :
     print("Comprehensions.py")
-    for i in range(18) :
+    for i in range(17) :
         eval("test" + str(i + 1) + "()")
     print("Done.")
 
