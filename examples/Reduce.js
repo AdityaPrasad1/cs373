@@ -28,8 +28,14 @@ function test3 () {
 function test4 () {
     assert(_.reduce([],        null,       3) == 3);}
 
+function test5 () {
+    assert([2, 3, 4].reduce(_.add,      0) == 9);}
+
+function test6 () {
+    assert([2, 3, 4].reduce(_.multiply, 1) == 24);}
+
 function main () {
-    for (let i of _.range(4))
+    for (let i of _.range(6))
         eval("test" + (i + 1) + "()");}
 
 console.log("Reduce.js");
