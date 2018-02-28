@@ -42,9 +42,9 @@ function test4 () {
     assert(x[2] === 4);}
 
 function main () {
+    console.log("Range.js");
     for (let i of _.range(4))
         eval("test" + (i + 1) + "()");}
+    console.log("Done.");
 
-console.log("Range.js");
 main();
-console.log("Done.");

@@ -33,9 +33,9 @@ function test6 () {
     assert(factorial(5) == 120);}
 
 function main () {
+    console.log("Factorial.js");
     for (let i of _.range(6))
         eval("test" + (i + 1) + "()");}
+    console.log("Done.");
 
-console.log("Factorial.js");
 main();
-console.log("Done.");

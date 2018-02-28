@@ -39,7 +39,10 @@ function test2 () {
     finally {
         assert(true);}}
 
-console.log("Exceptions.js");
-for (let i of _.range(2))
-    eval("test" + (i + 1) + "()");
-console.log("Done.");
+function main () {
+    console.log("Exceptions.js");
+    for (let i of _.range(2))
+        eval("test" + (i + 1) + "()");}
+    console.log("Done.");
+
+main();

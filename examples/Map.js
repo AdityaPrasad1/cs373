@@ -40,9 +40,9 @@ function test3 () {
     assert(_.isEqual(m, [4, 9, 16]));}
 
 function main () {
+    console.log("Map.js");
     for (let i of _.range(3))
         eval("test" + (i + 1) + "()");}
+    console.log("Done.");
 
-console.log("Map.js");
 main();
-console.log("Done.");

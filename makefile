@@ -114,6 +114,7 @@ sync:
     --include "Range.js"                   \
     --include "RangeT.js"                  \
     --include "Map.js"                     \
+    --include "Functions.js"               \
     --exclude "*"                          \
     ../../examples/javascript/ examples
 	@rsync -r -t -u -v --delete            \

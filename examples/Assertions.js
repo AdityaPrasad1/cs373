@@ -26,14 +26,14 @@ function cycle_length (n) {
     assert(c > 0);
     return c;}
 
-function test () {
+function main () {
+    console.log("Assertions.js");
     assert(cycle_length( 1) === 1);
     assert(cycle_length( 5) === 6);
     assert(cycle_length(10) === 7);}
+    console.log("Done.");
 
-console.log("Assertions.js");
-test();
-console.log("Done.");
+main();
 
 /*
 % node Assertions.js

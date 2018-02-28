@@ -17,7 +17,8 @@ JSFILES :=                  \
     Yield                   \
     Range                   \
     RangeT                  \
-    Map
+    Map                     \
+    Functions
 
 PFILES :=                   \
     Hello                   \

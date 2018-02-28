@@ -35,9 +35,9 @@ function test6 () {
     assert([2, 3, 4].reduce(_.multiply, 1) == 24);}
 
 function main () {
+    console.log("Reduce.js");
     for (let i of _.range(6))
         eval("test" + (i + 1) + "()");}
+    console.log("Done.");
 
-console.log("Reduce.js");
 main();
-console.log("Done.");

@@ -68,9 +68,9 @@ function test4 () {
     assert(_.isEqual(a, [2, 3, 4]));}
 
 function main () {
+    console.log("Yield.js");
     for (let i of _.range(4))
         eval("test" + (i + 1) + "()");}
+    console.log("Done.");
 
-console.log("Yield.js");
 main();
-console.log("Done.");
