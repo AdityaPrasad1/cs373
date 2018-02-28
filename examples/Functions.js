@@ -43,7 +43,7 @@ function A () {
     this.v = 2;}
 
 function test5 () {
-//  const x = A();        // TypeError: Cannot set property 'v' of undefined
+//  const x = A();         // TypeError: Cannot set property 'v' of undefined
     const x = new A();
     assert(x.v    == 2);
     assert(x["v"] == 2);}
