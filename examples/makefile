@@ -41,7 +41,9 @@ PFILES :=                   \
     Range                   \
     RangeT                  \
     Comprehensions          \
-    Map
+    Map                     \
+    Iterables               \
+    Functions
 
 %.jsx: %.js
 	-jshint $<

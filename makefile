@@ -86,6 +86,8 @@ sync:
     --include "RangeT.py"                  \
     --include "Comprehensions.py"          \
     --include "Map.py"                     \
+    --include "Iterables.py"               \
+    --include "Functions.py"               \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \
