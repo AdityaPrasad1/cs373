@@ -9,7 +9,7 @@
 """
 
 """
-classic example of map (transform) / reduce (accumulate) is something like the sum of the squares
+classic example of map / reduce is something like the sum of the squares
 
 other good examples are standard deviation and root-mean-square error (look those up!)
 """
