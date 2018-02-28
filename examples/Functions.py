@@ -56,9 +56,17 @@ def test5 () :
     assert list(m) == [4, 9, 16]
     assert list(m) == []
 
+def test6 () :
+    a = [2, 3, 4]
+    n = 1
+    m = map(lambda v : v ** n, a)
+    n = 2
+    assert list(m) == [4, 9, 16]
+    assert list(m) == []
+
 def main () :
     print("Functions.py")
-    for i in range(5) :
+    for i in range(6) :
         eval("test" + str(i + 1) + "()")
     print("Done.")
 
