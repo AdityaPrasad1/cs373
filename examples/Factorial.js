@@ -34,7 +34,7 @@ function test6 () {
 
 function main () {
     console.log("Factorial.js");
-    for (let i of _.range(6))
+    for (const i of _.range(6))
         eval("test" + (i + 1) + "()");}
     console.log("Done.");
 

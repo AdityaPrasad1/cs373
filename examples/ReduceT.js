@@ -22,7 +22,7 @@ const assert = require('assert');
 const _      = require('lodash');
 
 function reduce_for (a, bf, v) {
-    for (let w of a)
+    for (const w of a)
         v = bf(v, w);
     return v;}
 

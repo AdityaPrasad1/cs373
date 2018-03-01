@@ -126,7 +126,7 @@ function test13 () {
 
 function main () {
     console.log("Types.js");
-    for (let i of _.range(13))
+    for (const i of _.range(13))
         eval("test" + (i + 1) + "()");
     console.log("Done.");}
 

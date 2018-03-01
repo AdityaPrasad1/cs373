@@ -36,7 +36,7 @@ function factorial_while (n) {
 function factorial_range_for (n) {
     assert(n >= 0);
     let v = 1;
-    for (let i of _.range(1, n + 1))
+    for (const i of _.range(1, n + 1))
         v *= i;
     return v;}
 
@@ -76,30 +76,30 @@ describe('strcmp',
 
         it('test1',
             function () {
-                for (let f of a)
+                for (const f of a)
                     assert(f(0) == 1);});
 
         it('test2',
             function () {
-                for (let f of a)
+                for (const f of a)
                     assert(f(1) == 1);});
 
         it('test3',
             function () {
-                for (let f of a)
+                for (const f of a)
                     assert(f(2) == 2);});
 
         it('test4',
             function () {
-                for (let f of a)
+                for (const f of a)
                     assert(f(3) == 6);});
 
         it('test5',
             function () {
-                for (let f of a)
+                for (const f of a)
                     assert(f(4) == 24);});
 
         it('test6',
             function () {
-                for (let f of a)
+                for (const f of a)
                     assert(f(5) == 120);});});

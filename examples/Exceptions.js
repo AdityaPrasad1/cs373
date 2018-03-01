@@ -41,7 +41,7 @@ function test2 () {
 
 function main () {
     console.log("Exceptions.js");
-    for (let i of _.range(2))
+    for (const i of _.range(2))
         eval("test" + (i + 1) + "()");}
     console.log("Done.");
 
