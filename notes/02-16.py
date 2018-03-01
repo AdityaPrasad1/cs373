@@ -10,7 +10,7 @@ r = reduce(
 from operator import add, mul
 
 a = [2, 3, 4]
-print(reduce(add, a, 1)) # 9
+print(reduce(add, a, 1)) # 10
 
 """
 Java has a closed object model
