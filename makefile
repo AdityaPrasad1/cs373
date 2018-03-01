@@ -86,6 +86,7 @@ sync:
     --include "RangeT.py"                  \
     --include "Comprehensions.py"          \
     --include "Map.py"                     \
+    --include "MapT.py"                    \
     --include "Iterables.py"               \
     --include "Functions.py"               \
     --exclude "*"                          \
@@ -114,6 +115,7 @@ sync:
     --include "Range.js"                   \
     --include "RangeT.js"                  \
     --include "Map.js"                     \
+    --include "MapT.js"                    \
     --include "Functions.js"               \
     --exclude "*"                          \
     ../../examples/javascript/ examples

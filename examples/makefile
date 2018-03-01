@@ -18,6 +18,7 @@ JSFILES :=                  \
     Range                   \
     RangeT                  \
     Map                     \
+    MapT                    \
     Functions
 
 PFILES :=                   \
@@ -43,6 +44,7 @@ PFILES :=                   \
     RangeT                  \
     Comprehensions          \
     Map                     \
+    MapT                    \
     Iterables               \
     Functions
 
