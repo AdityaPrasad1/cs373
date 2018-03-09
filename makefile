@@ -89,6 +89,11 @@ sync:
     --include "MapT.py"                    \
     --include "Iterables.py"               \
     --include "Functions.py"               \
+    --include "FunctionKeywords.py"        \
+    --include "FunctionDefaults.py"        \
+    --include "FunctionUnpacking.py"       \
+    --include "FunctionTuple.py"           \
+    --include "FunctionDict.py"            \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \

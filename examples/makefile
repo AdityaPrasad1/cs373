@@ -46,7 +46,12 @@ PFILES :=                   \
     Map                     \
     MapT                    \
     Iterables               \
-    Functions
+    Functions               \
+    FuncitonKeywords        \
+    FuncitonDefaults        \
+    FuncitonUnpacking       \
+    FuncitonTuple           \
+    FuncitonDict
 
 %.jsx: %.js
 	-jshint $<
