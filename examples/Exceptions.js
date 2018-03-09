@@ -34,8 +34,12 @@ function test2 () {
         assert(f(true) === 1);
         assert(false);}
     catch (e) {
-        assert(e         instanceof Error);
-        assert(e.message ===        "abc");}
+        assert(typeof(e) === "object");
+        assert(typeof(e) !== Error);
+        assert(typeof(e) !== Object);
+        assert(e instanceof Error);
+        assert(e instanceof Object);
+        assert(e.message === "abc");}
     finally {
         assert(true);}}
 
