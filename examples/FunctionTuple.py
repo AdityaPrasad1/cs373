@@ -9,8 +9,8 @@
 # FunctionTuple.py
 # ----------------
 
-def f (x, y, *z) :
-    return [x, y, z]
+def f (x, y, *t) :
+    return [x, y, t]
 
 def test1 () :
     assert f(2, 3)       == [2, 3, ()]

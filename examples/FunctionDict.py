@@ -9,8 +9,8 @@
 # FunctionDict.py
 # ---------------
 
-def f (x, y, **z) :
-    return [x, y, z]
+def f (x, y, **d) :
+    return [x, y, d]
 
 def test1 () :
     assert f(2, 3)           == [2, 3, {}]
