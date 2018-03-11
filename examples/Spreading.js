@@ -31,7 +31,7 @@ function test2 () {
 
 function main () {
     console.log("Spreading.js");
-    for (let i of _.range(1))
+    for (let i of _.range(2))
         eval("test" + (i + 1) + "()");
     console.log("Done.");}
 
