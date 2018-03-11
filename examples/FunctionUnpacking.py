@@ -26,12 +26,20 @@ def test1 () :
     # f(*t, 2, 3)                       # TypeError: f() takes 3 positional arguments but 4 were given
 
 def test2 () :
+    u = (2, 3)
+    v = (4,)
+    assert f(*u, *v) == [2, 3, 4]
+    assert  [*u, *v] == [2, 3, 4]
+    assert  (*u, *v) == (2, 3, 4)
+    assert  {*u, *v} == {2, 3, 4}
+
+def test3 () :
     d = {"z" : 4, "y" : 3, "x" : 2}
     assert f(**d) == [2, 3, 4]
     # f(2,   **d)                   # TypeError: f() got multiple values for argument 'x'
     # f(x=2, **d)                   # TypeError: f() got multiple values for keyword argument 'x'
 
-def test3 () :
+def test4 () :
     d = {"z" : 4, "y" : 3}
     assert f(2,   **d) == [2, 3, 4]
     # f(**d, 2)                       # SyntaxError: invalid syntax
@@ -40,12 +48,12 @@ def test3 () :
     # assert f(z=2, **d) == [2, 3, 4] # TypeError: f() got multiple values for keyword argument 'z'
     # assert f(**d, z=2) == [2, 3, 4] # TypeError: f() got multiple values for keyword argument 'z'
 
-def test4 () :
+def test5 () :
     d = {"y" : 3}
     assert f(2, z=4, **d) == [2, 3, 4]
     assert f(2, **d, z=4) == [2, 3, 4]
 
-def test5 () :
+def test6 () :
     t = (3,)
     d = {"z" : 4}
     assert f(2,   *t,  **d) == [2, 3, 4]
@@ -54,9 +62,14 @@ def test5 () :
     assert f(*t,  **d, y=2) == [3, 2, 4]
     # f(**d, *t, y=2)                    # SyntaxError: iterable argument unpacking follows keyword argument unpacking
 
+def test7 () :
+    u = {"x":2, "y":3}
+    v = {"z":4}
+    assert f(**u, **v) == [2, 3, 4]
+
 def main () :
     print("FunctionUnpacking.py")
-    for i in range(5) :
+    for i in range(7) :
         eval("test" + str(i + 1) + "()")
     print("Done.")
 

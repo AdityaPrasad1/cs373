@@ -22,6 +22,9 @@ if __name__ == "__main__" :      # pragma: no cover
 Developed in 1989 by Guido van Rossum of the Netherlands, now at Dropbox.
 Python is procedural, object-oriented, dynamically typed, and garbage collected.
 
+Python 2: 16 Oct 2000
+Python 3:  3 Dec 2008
+
 
 
 % which python3

@@ -16,6 +16,13 @@ resigned as CEO.
 Javascript is procedural, object-oriented, dynamically typed, and garbage
 collected.
 
+ES 1: Jun 1997
+ES 2: Jun 1998
+...
+ES 5: Dec 2009
+ES 6: Jun 2016
+ES 7: Jun 2017
+
 
 
 % which node

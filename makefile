@@ -122,6 +122,7 @@ sync:
     --include "Map.js"                     \
     --include "MapT.js"                    \
     --include "Functions.js"               \
+    --include "Spreading.js"               \
     --exclude "*"                          \
     ../../examples/javascript/ examples
 	@rsync -r -t -u -v --delete            \

@@ -19,7 +19,8 @@ JSFILES :=                  \
     RangeT                  \
     Map                     \
     MapT                    \
-    Functions
+    Functions               \
+    Spreading
 
 PFILES :=                   \
     Hello                   \
