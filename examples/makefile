@@ -9,6 +9,7 @@ JSFILES :=                  \
     Exceptions              \
     StrCmpT                 \
     Types                   \
+    Operators               \
     Reduce                  \
     ReduceT                 \
     Iteration               \

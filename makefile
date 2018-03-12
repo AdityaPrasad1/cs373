@@ -109,6 +109,7 @@ sync:
     --include "StrCmp.js"                  \
     --include "StrCmpT.js"                 \
     --include "Types.js"                   \
+    --include "Operators.js"               \
     --include "Factorial.js"               \
     --include "FactorialT.js"              \
     --include "Reduce.js"                  \
