@@ -21,7 +21,8 @@ JSFILES :=                  \
     Map                     \
     MapT                    \
     Functions               \
-    Spreading
+    FunctionDefaults        \
+    FunctionUnpacking
 
 PFILES :=                   \
     Hello                   \
