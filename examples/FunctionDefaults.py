@@ -10,25 +10,25 @@
 # FunctionDefaults.py
 # -------------------
 
-def f (x, y, z=4) :
+def f (x, y, z=5) :
     return [x, y, z]
 
 def test1 () :
-    assert f(2, 3)    == [2, 3, 4]
-    assert f(2, 3, 5) == [2, 3, 5]
+    assert f(2, 3)    == [2, 3, 5]
+    assert f(2, 3, 4) == [2, 3, 4]
 
-# def g (x, y=3, z) : # SyntaxError: non-default argument follows default argument
+# def g (x, y=5, z) : # SyntaxError: non-default argument follows default argument
 #     return [x, y, z]
 
-def g (x=2, y=3, z=4) :
+def g (x=5, y=6, z=7) :
     return [x, y, z]
 
 def test2 () :
-    assert g()        == [2, 3, 4]
-    assert g(5)       == [5, 3, 4]
-    assert g(5, 6)    == [5, 6, 4]
-    assert g(5, 6, 7) == [5, 6, 7]
-    assert g(5, z=7)  == [5, 3, 7]
+    assert g()        == [5, 6, 7]
+    assert g(2)       == [2, 6, 7]
+    assert g(2, 3)    == [2, 3, 7]
+    assert g(2, 3, 4) == [2, 3, 4]
+    assert g(2, z=4)  == [2, 6, 4]
 
 def h1 (x=[]) : # mutable default
     x += [2]
