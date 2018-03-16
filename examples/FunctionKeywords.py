@@ -4,6 +4,7 @@
 # pylint: disable = eval-used
 # pylint: disable = invalid-name
 # pylint: disable = missing-docstring
+# pylint: disable = line-too-long
 
 # -------------------
 # FunctionKeywords.py
@@ -13,10 +14,6 @@ def f (x, y, z) :
     return [x, y, z]
 
 def test1 () :
-    # f(2, 3)                      # TypeError: f() missing 1 required positional argument: 'z'
-    assert f(2, 3, 4) == [2, 3, 4]
-    # f(2, 3, 4, 5)                # TypeError: f() takes 3 positional arguments but 4 were given
-
     assert f(2, z=4, y=3) == [2, 3, 4]
     # f(z=4, 2,   y=3)                 # SyntaxError: non-keyword arg after keyword arg
     # f(2,   x=2, y=3)                 # TypeError: f() got multiple values for argument 'x'

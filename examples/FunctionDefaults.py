@@ -10,25 +10,23 @@
 # FunctionDefaults.py
 # -------------------
 
-def f (x, y, z=5) :
+def f (x, y, z) :
     return [x, y, z]
 
 def test1 () :
-    assert f(2, 3)    == [2, 3, 5]
+    # f(2, 3)                      # TypeError: f() missing 1 required positional argument: 'z'
     assert f(2, 3, 4) == [2, 3, 4]
+    # f(2, 3, 4, 5)                # TypeError: f() takes 3 positional arguments but 4 were given
 
-# def g (x, y=5, z) : # SyntaxError: non-default argument follows default argument
-#     return [x, y, z]
-
-def g (x=5, y=6, z=7) :
+def g1 (x, y, z=5) :
     return [x, y, z]
 
 def test2 () :
-    assert g()        == [5, 6, 7]
-    assert g(2)       == [2, 6, 7]
-    assert g(2, 3)    == [2, 3, 7]
-    assert g(2, 3, 4) == [2, 3, 4]
-    assert g(2, z=4)  == [2, 6, 4]
+    assert g1(2, 3)    == [2, 3, 5]
+    assert g1(2, 3, 4) == [2, 3, 4]
+
+# def g2 (x, y=5, z) : # SyntaxError: non-default argument follows default argument
+#     return [x, y, z]
 
 def h1 (x=[]) : # mutable default
     x += [2]

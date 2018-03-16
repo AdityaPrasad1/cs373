@@ -18,10 +18,10 @@ def test1 () :
     assert f(2, 5, t) == [2, 5, (3, 4)]
     assert f(2, *t)   == [2, 3, 4]
     assert f(*t,  2)  == [3, 4, 2]
-    # f(x=2, *t)                        # TypeError: f() got multiple values for argument 'x'
-    # f(*t,  x=2)                       # TypeError: f() got multiple values for argument 'x'
     assert f(z=2, *t) == [3, 4, 2]
     assert f(*t, z=2) == [3, 4, 2]
+    # f(x=2, *t)                        # TypeError: f() got multiple values for argument 'x'
+    # f(*t,  x=2)                       # TypeError: f() got multiple values for argument 'x'
     # f(*t)                             # TypeError: f() missing 1 required positional argument: 'z'
     # f(*t, 2, 3)                       # TypeError: f() takes 3 positional arguments but 4 were given
 

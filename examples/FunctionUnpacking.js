@@ -21,8 +21,11 @@ function f (x, y, z) {
 
 function test1 () {
     const a = [3, 4];
-    assert(_.isEqual(f(2, 5, a), [2, 5, [3, 4]]));
-    assert(_.isEqual(f(2, ...a), [2, 3, 4]));}
+    assert(_.isEqual(f(2, 5, a),    [2, 5, [3, 4]]));
+    assert(_.isEqual(f(2, ...a),    [2, 3, 4]));
+    assert(_.isEqual(f(...a, 2),    [3, 4, 2]));
+    assert(_.isEqual(f(...a),       [3, 4, undefined]));
+    assert(_.isEqual(f(...a, 2, 4), [3, 4, 2]));}
 
 function test2 () {
     const a = [2, 3];
