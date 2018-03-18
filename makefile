@@ -130,6 +130,15 @@ sync:
     --exclude "*"                          \
     ../../examples/javascript/ examples
 	@rsync -r -t -u -v --delete            \
+    --include "ShowDatabases.sql"          \
+    --include "ShowEngines.sql"            \
+    --include "CreateDatabase.sql"         \
+    --include "CreateTables.sql"           \
+    --include "Insert.sql"                 \
+    --include "Select.sql"                 \
+    --exclude "*"                          \
+    ../../examples/sql/ examples
+	@rsync -r -t -u -v --delete            \
     --include "Collatz.py"                 \
     --include "RunCollatz.py"              \
     --include "RunCollatz.in"              \

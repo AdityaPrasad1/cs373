@@ -29,7 +29,9 @@ class range_iterator_1 {
         return this;}
 
     next () {
-        let n = {"value": this.b, "done": (this.b == this.e)};
+        let n = {
+            value: this.b,
+            done:  (this.b == this.e)};
         ++this.b;
         return n;}}
 

@@ -29,20 +29,21 @@ class my_range_iterator_1 {
         return this;}
 
     next () {
-        let n = {"value": this.b, "done": (this.b == this.e)};
+        let n = {
+            value: this.b,
+            done:  (this.b == this.e)};
         ++this.b;
         return n;}}
 
 class my_range_1 {
     constructor (b, e) {
-        const self = this;
         this.b = b;
         this.e = e;
         const h = {
-            get (x, v) {
+            get : (x, v) => {
                 if (v in x)
                     return x[v];
-                return self.b + parseInt(v);}};
+                return this.b + parseInt(v);}};
         return new Proxy(this, h);}
 
     [Symbol.iterator] () {
@@ -50,14 +51,13 @@ class my_range_1 {
 
 class my_range_2 {
     constructor (b, e) {
-        const self = this;
         this.b = b;
         this.e = e;
         const h = {
-            get (x, v) {
+            get: (x, v) => {
                 if (v in x)
                     return x[v];
-                return self.b + parseInt(v);}};
+                return this.b + parseInt(v);}};
         return new Proxy(this, h);}
 
     * [Symbol.iterator] () {
