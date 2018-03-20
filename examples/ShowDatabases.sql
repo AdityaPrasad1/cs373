@@ -36,7 +36,7 @@ Starting MySQL
 
 
 
-% mysql -uroot
+% mysql
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 7
 Server version: 5.7.21 Homebrew
@@ -94,7 +94,7 @@ Bye
 
 
 
-% mysql -uroot -t < ShowDatabases.sql
+% mysql -t < ShowDatabases.sql
 +------------------------+
 | *** show databases *** |
 +------------------------+
@@ -107,7 +107,6 @@ Bye
 | mysql              |
 | performance_schema |
 | sys                |
-| test               |
 +--------------------+
 
 

@@ -51,7 +51,7 @@ select "*** select #6 ***";
 select major, decision
     from Apply
     order by major
-    limit 5;
+    limit 6;
 
 -- relational algebra project, uniquely, sort descending
 select "*** select #7 ***";
@@ -62,7 +62,7 @@ select distinct major, decision
 exit
 
 /*
-mysql -uroot -t < Select.sql
+mysql -t < Select.sql
 +----------------------+
 | *** show Student *** |
 +----------------------+
@@ -251,6 +251,7 @@ mysql -uroot -t < Select.sql
 | bioengineering |        1 |
 | biology        |        0 |
 | biology        |        1 |
+| CS             |        1 |
 | CS             |        1 |
 +----------------+----------+
 

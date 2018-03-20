@@ -15,7 +15,7 @@ show databases;
 exit
 
 /*
-mysql -uroot -t < CreateDatabase.sql
+mysql -t < CreateDatabase.sql
 +----------------------------+
 | *** drop database test *** |
 +----------------------------+

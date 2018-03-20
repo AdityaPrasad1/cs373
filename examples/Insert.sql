@@ -65,7 +65,7 @@ select * from Apply;
 exit
 
 /*
-mysql -uroot -t < Insert.sql
+mysql -t < Insert.sql
 +------------------------+
 | *** insert Student *** |
 +------------------------+

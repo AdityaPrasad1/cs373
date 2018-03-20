@@ -7,7 +7,7 @@ show engines;
 exit
 
 /*
-% mysql -uroot -t < ShowEngines.sql
+% mysql -t < ShowEngines.sql
 +----------------------+
 | *** show engines *** |
 +----------------------+

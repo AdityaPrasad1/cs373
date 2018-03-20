@@ -57,7 +57,7 @@ describe Apply;
 exit
 
 /*
-mysql -uroot -t < CreateTables.sql
+mysql -t < CreateTables.sql
 +----------------------------+
 | *** drop table Student *** |
 +----------------------------+
