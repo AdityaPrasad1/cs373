@@ -37,13 +37,14 @@ class my_range_iterator_1 {
 
 class my_range_1 {
     constructor (b, e) {
+        const self = this;
         this.b = b;
         this.e = e;
         const h = {
-            get : (x, v) => {
+            get : function (x, v) {
                 if (v in x)
                     return x[v];
-                return this.b + parseInt(v);}};
+                return self.b + parseInt(v);}};
         return new Proxy(this, h);}
 
     [Symbol.iterator] () {
