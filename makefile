@@ -139,6 +139,10 @@ sync:
     --exclude "*"                          \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete            \
+    --include "SAC.uml"                    \
+    --exclude "*"                          \
+    ../../examples/uml/ examples
+	@rsync -r -t -u -v --delete            \
     --include "Collatz.py"                 \
     --include "RunCollatz.py"              \
     --include "RunCollatz.in"              \
