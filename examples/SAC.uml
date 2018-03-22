@@ -1,25 +1,26 @@
 @startuml
-Student - Apply
-Apply   - College
+
+Student "1" -o     Apply
+Apply       o- "1" College
 
 class Student {
-    int sID
-    text sName
-    float GPA
-    int sizeHS
-    }
-
-class Apply {
-    int sID
-    text cName
-    text major
-    boolean decision
+    + int sID
+    + text sName
+    + float GPA
+    + int sizeHS
     }
 
 class College {
-    text cName
-    char[2] state
-    int enrollment
+    + varchar[8] cName
+    + char[2] state
+    + int enrollment
+    }
+
+class Apply {
+    + int sID
+    + varchar[8] cName
+    + text major
+    + boolean decision
     }
 
 @enduml
