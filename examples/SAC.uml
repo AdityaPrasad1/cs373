@@ -1,7 +1,7 @@
 @startuml
 
-Student "1" -o     Apply
-Apply       o- "1" College
+Student "1" -o "*" Apply
+Apply   "*" o- "1" College
 
 class Student {
     + int sID
