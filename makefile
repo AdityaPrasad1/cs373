@@ -95,7 +95,9 @@ sync:
     --include "FunctionTuple.py"           \
     --include "FunctionDict.py"            \
     --include "Select.py"                  \
+    --include "SelectT.py"                 \
     --include "Project.py"                 \
+    --include "ProjectT.py"                \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \

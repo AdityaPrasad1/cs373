@@ -16,43 +16,47 @@ def test1 () :
         {"A" : 1, "B" : 4, "C" : 3},
         {"A" : 2, "B" : 5, "C" : 2},
         {"A" : 3, "B" : 6, "C" : 1}]
-    assert                                \
-        list(select(r, lambda d : False)) \
-        ==                                \
-        []
+    x = select(r, lambda d : False)
+    assert list(x) == []
 
 def test2 () :
     r = [
         {"A" : 1, "B" : 4, "C" : 3},
         {"A" : 2, "B" : 5, "C" : 2},
         {"A" : 3, "B" : 6, "C" : 1}]
-    assert                               \
-        list(select(r, lambda d : True)) \
-        ==                               \
+    x = select(r, lambda d : True)
+    assert                           \
+        list(x)                      \
+        ==                           \
         [{"A" : 1, "B" : 4, "C" : 3},
          {"A" : 2, "B" : 5, "C" : 2},
          {"A" : 3, "B" : 6, "C" : 1}]
+    assert list(x) == []
 
 def test3 () :
     r = [
         {"A" : 1, "B" : 4, "C" : 3},
         {"A" : 2, "B" : 5, "C" : 2},
         {"A" : 3, "B" : 6, "C" : 1}]
-    assert                                     \
-        list(select(r, lambda d : d["B"] > 4)) \
-        ==                                     \
+    x = select(r, lambda d : d["B"] > 4)
+    assert                         \
+        list(x)                    \
+        ==                         \
         [{'A': 2, 'B': 5, 'C': 2},
          {'A': 3, 'B': 6, 'C': 1}]
+    assert list(x) == []
 
 def test4 () :
     r = [
         {"A" : 1, "B" : 4, "C" : 3},
         {"A" : 2, "B" : 5, "C" : 2},
         {"A" : 3, "B" : 6, "C" : 1}]
-    assert                                          \
-        list(select(r, lambda d : d["A"] > d["C"])) \
-        ==                                          \
+    x = select(r, lambda d : d["A"] > d["C"])
+    assert                         \
+        list(x)                    \
+        ==                         \
         [{'A': 3, 'B': 6, 'C': 1}]
+    assert list(x) == []
 
 def main () :
     for n in range(4) :
