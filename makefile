@@ -140,8 +140,8 @@ sync:
     --include "CreateTables.out"           \
     --include "Insert.sql"                 \
     --include "Insert.out"                 \
-    --include "Insert.sql"                 \
-    --include "Insert.out"                 \
+    --include "Select.sql"                 \
+    --include "Select.out"                 \
     --exclude "*"                          \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete            \
