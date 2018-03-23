@@ -94,20 +94,7 @@ Bye
 
 
 
-% mysql -t < ShowDatabases.sql
-+------------------------+
-| *** show databases *** |
-+------------------------+
-| *** show databases *** |
-+------------------------+
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
+% mysql -t < ShowDatabases.sql > ShowDatabases.out
 
 
 

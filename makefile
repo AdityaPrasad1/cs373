@@ -131,11 +131,17 @@ sync:
     ../../examples/javascript/ examples
 	@rsync -r -t -u -v --delete            \
     --include "ShowDatabases.sql"          \
+    --include "ShowDatabases.out"          \
     --include "ShowEngines.sql"            \
+    --include "ShowEngines.out"            \
     --include "CreateDatabase.sql"         \
+    --include "CreateDatabase.out"         \
     --include "CreateTables.sql"           \
+    --include "CreateTables.out"           \
     --include "Insert.sql"                 \
-    --include "Select.sql"                 \
+    --include "Insert.out"                 \
+    --include "Insert.sql"                 \
+    --include "Insert.out"                 \
     --exclude "*"                          \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete            \

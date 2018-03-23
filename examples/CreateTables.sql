@@ -24,14 +24,16 @@ create table Student (
     sName       text,
     GPA         float,
     sizeHS      int,
-    primary key (sID));
+    primary key (sID))
+    engine = innodb;
 
 select "*** create table College ***";
 create table College (
     cName       varchar(8) not null,
     state       char(2),
     enrollment  int,
-    primary key (cName));
+    primary key (cName))
+    engine = innodb;
 
 select "*** create table Apply ***";
 create table Apply (
@@ -40,7 +42,8 @@ create table Apply (
     major       text,
     decision    boolean,
     foreign key (sID)   references Student (sID),
-    foreign key (cName) references College (cName));
+    foreign key (cName) references College (cName))
+    engine = innodb;
 
 select "*** show tables ***";
 show tables;
@@ -55,115 +58,3 @@ select "*** describe Apply ***";
 describe Apply;
 
 exit
-
-/*
-mysql -t < CreateTables.sql
-+--------------------------+
-| *** drop table Apply *** |
-+--------------------------+
-| *** drop table Apply *** |
-+--------------------------+
-
-
-
-+----------------------------+
-| *** drop table College *** |
-+----------------------------+
-| *** drop table College *** |
-+----------------------------+
-
-
-
-+----------------------------+
-| *** drop table Student *** |
-+----------------------------+
-| *** drop table Student *** |
-+----------------------------+
-
-
-
-+------------------------------+
-| *** create table Student *** |
-+------------------------------+
-| *** create table Student *** |
-+------------------------------+
-
-
-
-+------------------------------+
-| *** create table College *** |
-+------------------------------+
-| *** create table College *** |
-+------------------------------+
-
-
-
-+----------------------------+
-| *** create table Apply *** |
-+----------------------------+
-| *** create table Apply *** |
-+----------------------------+
-
-
-
-+---------------------+
-| *** show tables *** |
-+---------------------+
-| *** show tables *** |
-+---------------------+
-+----------------+
-| Tables_in_test |
-+----------------+
-| Apply          |
-| College        |
-| Student        |
-+----------------+
-
-
-
-
-+--------------------------+
-| *** describe Student *** |
-+--------------------------+
-| *** describe Student *** |
-+--------------------------+
-+--------+---------+------+-----+---------+-------+
-| Field  | Type    | Null | Key | Default | Extra |
-+--------+---------+------+-----+---------+-------+
-| sID    | int(11) | NO   | PRI | NULL    |       |
-| sName  | text    | YES  |     | NULL    |       |
-| GPA    | float   | YES  |     | NULL    |       |
-| sizeHS | int(11) | YES  |     | NULL    |       |
-+--------+---------+------+-----+---------+-------+
-
-
-
-+--------------------------+
-| *** describe College *** |
-+--------------------------+
-| *** describe College *** |
-+--------------------------+
-+------------+------------+------+-----+---------+-------+
-| Field      | Type       | Null | Key | Default | Extra |
-+------------+------------+------+-----+---------+-------+
-| cName      | varchar(8) | NO   | PRI | NULL    |       |
-| state      | char(2)    | YES  |     | NULL    |       |
-| enrollment | int(11)    | YES  |     | NULL    |       |
-+------------+------------+------+-----+---------+-------+
-
-
-
-+------------------------+
-| *** describe Apply *** |
-+------------------------+
-| *** describe Apply *** |
-+------------------------+
-+----------+------------+------+-----+---------+-------+
-| Field    | Type       | Null | Key | Default | Extra |
-+----------+------------+------+-----+---------+-------+
-| sID      | int(11)    | YES  | MUL | NULL    |       |
-| cName    | varchar(8) | YES  | MUL | NULL    |       |
-| major    | text       | YES  |     | NULL    |       |
-| decision | tinyint(1) | YES  |     | NULL    |       |
-+----------+------------+------+-----+---------+-------+
-*/
