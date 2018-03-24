@@ -53,8 +53,9 @@ PFILES :=                   \
     FunctionKeywords        \
     FunctionDefaults        \
     FunctionUnpacking       \
-    FunctionTuple           \
-    FunctionDict
+    FunctionDict            \
+    SelectT                 \
+    ProjectT
 
 %.jsx: %.js
 	-jshint $<
