@@ -98,6 +98,7 @@ sync:
     --include "SelectT.py"                 \
     --include "Project.py"                 \
     --include "ProjectT.py"                \
+    --include "RegExps.py"                 \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \

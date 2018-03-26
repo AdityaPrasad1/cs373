@@ -55,7 +55,8 @@ PFILES :=                   \
     FunctionUnpacking       \
     FunctionDict            \
     SelectT                 \
-    ProjectT
+    ProjectT                \
+    RegExps
 
 %.jsx: %.js
 	-jshint $<
