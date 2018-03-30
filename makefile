@@ -145,6 +145,10 @@ sync:
     --include "Insert.out"                 \
     --include "Select.sql"                 \
     --include "Select.out"                 \
+    --include "SelectT.sql"                \
+    --include "SelectT.out"                \
+    --include "Like.sql"                   \
+    --include "Like.out"                   \
     --exclude "*"                          \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete            \
