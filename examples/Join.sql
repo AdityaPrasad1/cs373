@@ -52,7 +52,7 @@ select *
           (decision = false);
 
 -- relational algebra theta join and select and project
-select "*** query #5 ***";
+select "*** query #6 ***";
 select sName, GPA
     from Student
     inner join Apply using (sID)
@@ -61,7 +61,7 @@ select sName, GPA
           (decision = false);
 
 -- relational algebra theta join and select
-select "*** query #6 ***";
+select "*** query #7 ***";
 select *
     from Student
         inner join Apply   using (sID)
@@ -72,7 +72,7 @@ select *
           (enrollment > 20000);
 
 -- relational algebra theta join and select and project
-select "*** query #7 ***";
+select "*** query #8 ***";
 select sName, GPA
     from Student
         inner join Apply   using (sID)
@@ -83,7 +83,7 @@ select sName, GPA
           (enrollment > 20000);
 
 -- relational algebra self join
-select "*** query #8 ***";
+select "*** query #9 ***";
 select R.cName, R.state
     from College as R
     inner join College as S
