@@ -60,24 +60,22 @@ select "*** query #7 ***";
 select count(cName)
     from College;
 
--- smallest enrollment of colleges
+-- smallest, largest, average, and total enrollment of colleges
 select "*** query #8 ***";
-select min(enrollment)
+select min(enrollment), max(enrollment), avg(enrollment), sum(enrollment)
     from College;
 
--- largest enrollment of colleges
+-- smallest, largest, average, and total enrollment of colleges by state
 select "*** query #9 ***";
-select max(enrollment)
-    from College;
+select state, count(*), min(enrollment), max(enrollment), avg(enrollment), sum(enrollment)
+    from College
+    group by state;
 
--- average enrollment of colleges
+-- smallest, largest, average, and total enrollment of colleges by state, if state has 2 or more colleges
 select "*** query #10 ***";
-select avg(enrollment)
-    from College;
-
--- total enrollment of colleges
-select "*** query #11 ***";
-select sum(enrollment)
-    from College;
+select state, count(*), min(enrollment), max(enrollment), avg(enrollment), sum(enrollment)
+    from College
+    group by state
+    having count(*) >= 2;
 
 exit

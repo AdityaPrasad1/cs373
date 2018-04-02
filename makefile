@@ -149,6 +149,10 @@ sync:
     --include "SelectT.out"                \
     --include "Like.sql"                   \
     --include "Like.out"                   \
+    --include "LikeT.sql"                  \
+    --include "LikeT.out"                  \
+    --include "Join.sql"                   \
+    --include "Join.out"                   \
     --exclude "*"                          \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete            \

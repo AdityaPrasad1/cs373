@@ -1,0 +1,29 @@
+query #1
+query #1
+count(cName)
+3
+query #2
+query #2
+min(enrollment)	max(enrollment)	avg(enrollment)
+21000	25000	23000.0000
+query #3
+query #3
+sName	sizeHS
+Amy	1000
+Mary	1200
+Amy	1000
+Fay	200
+Jay	1500
+Gary	800
+query #4
+query #4
+min(sizeHS)	max(sizeHS)	avg(sizeHS)
+200	1500	925.0000
+query #5
+query #5
+GPA
+3.9
+3.9
+3.7
+3.5
+3.4
