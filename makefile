@@ -99,6 +99,9 @@ sync:
     --include "Project.py"                 \
     --include "ProjectT.py"                \
     --include "RegExps.py"                 \
+    --include "CrossJoin.py"               \
+    --include "ThetaJoin.py"               \
+    --include "NaturalJoin.py"             \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \
