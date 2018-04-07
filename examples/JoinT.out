@@ -1,0 +1,22 @@
+query #1
+query #1
+sID	sName	GPA
+123	Amy	3.9
+345	Craig	3.5
+543	Craig	3.4
+876	Irene	3.9
+987	Helen	3.7
+query #2
+query #2
+sID	sName	GPA
+123	Amy	3.9
+345	Craig	3.5
+543	Craig	3.4
+876	Irene	3.9
+987	Helen	3.7
+query #3
+query #3
+sID	sName
+543	Craig
+876	Irene
+987	Helen
