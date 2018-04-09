@@ -169,6 +169,8 @@ sync:
 	@rsync -r -t -u -v --delete            \
     --include "SAC.uml"                    \
     --include "SAC.png"                    \
+    --include "StrategyPattern1.uml"       \
+    --include "StrategyPattern1.png"       \
     --exclude "*"                          \
     ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete            \
