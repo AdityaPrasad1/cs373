@@ -163,6 +163,10 @@ sync:
     --exclude "*"                          \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete            \
+    --include "StrategyPattern1.java"      \
+    --exclude "*"                          \
+    ../../examples/java/ examples
+	@rsync -r -t -u -v --delete            \
     --include "SAC.uml"                    \
     --include "SAC.png"                    \
     --exclude "*"                          \
