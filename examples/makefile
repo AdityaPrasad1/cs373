@@ -56,7 +56,10 @@ PFILES :=                   \
     FunctionDict            \
     SelectT                 \
     ProjectT                \
-    RegExps
+    RegExps                 \
+    CrossJoinT              \
+    ThetaJoinT              \
+    NaturalJoinT
 
 %.jsx: %.js
 	-jshint $<
