@@ -105,7 +105,7 @@ class Customer {
 
 final class StrategyPattern1 {
     public static void main (String[] args) {
-        System.out.println("StrategyPattern.java");
+        System.out.println("StrategyPattern1.java");
 
         Customer x = new Customer("Penelope");
         assert x.statement().equals(
