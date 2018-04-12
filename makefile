@@ -177,6 +177,8 @@ sync:
     --include "StrategyPattern3.png"       \
     --include "StrategyPattern4.uml"       \
     --include "StrategyPattern4.png"       \
+    --include "StrategyPattern5.uml"       \
+    --include "StrategyPattern5.png"       \
     --exclude "*"                          \
     ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete            \
