@@ -23,10 +23,8 @@ def test1 () :
         {"C" : 3, "D" : 6},
         {"C" : 4, "D" : 6}]
 
-    assert                                          \
-        list(theta_join(r, s, lambda u, f : False)) \
-        ==                                          \
-        []
+    x = theta_join(r, s, lambda u, f : False)
+    assert list(x) == []
 
 def test2 () :
     r = [
@@ -40,9 +38,10 @@ def test2 () :
         {"C" : 3, "D" : 6},
         {"C" : 4, "D" : 6}]
 
-    assert                                         \
-        list(theta_join(r, s, lambda u, f : True)) \
-        ==                                         \
+    x = theta_join(r, s, lambda u, f : True)
+    assert                                 \
+        list(x)                            \
+        ==                                 \
         [{'A': 1, 'B': 4, 'C': 2, 'D': 7},
          {'A': 1, 'B': 4, 'C': 3, 'D': 5},
          {'A': 1, 'B': 4, 'C': 3, 'D': 6},
@@ -55,6 +54,7 @@ def test2 () :
          {'A': 3, 'B': 6, 'C': 3, 'D': 5},
          {'A': 3, 'B': 6, 'C': 3, 'D': 6},
          {'A': 3, 'B': 6, 'C': 4, 'D': 6}]
+    assert list(x) == []
 
 def test3 () :
     r = [
@@ -68,9 +68,10 @@ def test3 () :
         {"C" : 3, "D" : 6},
         {"C" : 4, "D" : 6}]
 
-    assert                                                     \
-        list(theta_join(r, s, lambda u, v : u["A"] == v["C"])) \
-        ==                                                     \
+    x = theta_join(r, s, lambda u, v : u["A"] == v["C"])
+    assert                                 \
+        list(x)                            \
+        ==                                 \
         [{'A': 2, 'B': 5, 'C': 2, 'D': 7},
          {'A': 3, 'B': 6, 'C': 3, 'D': 5},
          {'A': 3, 'B': 6, 'C': 3, 'D': 6}]

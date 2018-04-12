@@ -23,8 +23,9 @@ def test1 () :
         {"C" : 3, "D" : 6},
         {"C" : 4, "D" : 6}]
 
+    x = cross_join(r, s)
     assert                                 \
-        list(cross_join(r, s))             \
+        list(x)                            \
         ==                                 \
         [{'A': 1, 'B': 4, 'C': 2, 'D': 7},
          {'A': 1, 'B': 4, 'C': 3, 'D': 5},
@@ -38,6 +39,7 @@ def test1 () :
          {'A': 3, 'B': 6, 'C': 3, 'D': 5},
          {'A': 3, 'B': 6, 'C': 3, 'D': 6},
          {'A': 3, 'B': 6, 'C': 4, 'D': 6}]
+    assert list(x) == []
 
 def main () :
     for n in range(1) :

@@ -100,8 +100,11 @@ sync:
     --include "ProjectT.py"                \
     --include "RegExps.py"                 \
     --include "CrossJoin.py"               \
+    --include "CrossJoinT.py"              \
     --include "ThetaJoin.py"               \
+    --include "ThetaJoinT.py"              \
     --include "NaturalJoin.py"             \
+    --include "NaturalJoinT.py"            \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \

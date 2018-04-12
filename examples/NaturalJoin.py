@@ -23,8 +23,9 @@ def test1 () :
         {"C" : 3, "D" : 6},
         {"C" : 4, "D" : 6}]
 
+    x = natural_join(r, s)
     assert                                 \
-        list(natural_join(r, s))           \
+        list(x)                            \
         ==                                 \
         [{'A': 1, 'B': 4, 'C': 2, 'D': 7},
          {'A': 1, 'B': 4, 'C': 3, 'D': 5},
@@ -38,6 +39,7 @@ def test1 () :
          {'A': 3, 'B': 6, 'C': 3, 'D': 5},
          {'A': 3, 'B': 6, 'C': 3, 'D': 6},
          {'A': 3, 'B': 6, 'C': 4, 'D': 6}]
+    assert list(x) == []
 
 def test2 () :
     r = [
@@ -51,10 +53,8 @@ def test2 () :
         {"A" : 6, "B" : 6, "D" : 6},
         {"A" : 7, "B" : 7, "D" : 6}]
 
-    assert                       \
-        list(natural_join(r, s)) \
-        ==                       \
-        []
+    x = natural_join(r, s)
+    assert list(x) == []
 
 def test3 () :
     r = [
@@ -68,10 +68,12 @@ def test3 () :
         {"A" : 3, "B" : 6, "D" : 6},
         {"A" : 4, "B" : 7, "D" : 6}]
 
-    assert                       \
-        list(natural_join(r, s)) \
-        ==                       \
+    x = natural_join(r, s)
+    assert                                 \
+        list(x)                            \
+        ==                                 \
         [{'A': 3, 'B': 6, 'C': 9, 'D': 6}]
+    assert list(x) == []
 
 def main () :
     for n in range(3) :
