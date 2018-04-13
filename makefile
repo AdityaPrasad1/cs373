@@ -167,6 +167,9 @@ sync:
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete            \
     --include "StrategyPattern1.java"      \
+    --include "StrategyPattern2.java"      \
+    --include "StrategyPattern3.java"      \
+    --include "StrategyPattern4.java"      \
     --exclude "*"                          \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete            \
