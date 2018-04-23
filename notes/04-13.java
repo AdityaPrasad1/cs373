@@ -1,8 +1,8 @@
-# -----------
-# Fri, 13 Apr
-# -----------
+// -----------
+// Fri, 13 Apr
+// -----------
 
-"""
+/*
 Replace Type Code with Subclasses
 Replace Type Code with State / Strategy
 
@@ -26,4 +26,4 @@ Java
 C++
     class vector
     class stack contains vector
-"""
+*/
