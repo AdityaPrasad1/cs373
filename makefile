@@ -170,6 +170,11 @@ sync:
     --include "StrategyPattern2.java"      \
     --include "StrategyPattern3.java"      \
     --include "StrategyPattern4.java"      \
+    --include "StrategyPattern5.java"      \
+    --include "StrategyPattern6.java"      \
+    --include "MethodOverriding2.java"     \
+    --include "DynamicBinding.java"        \
+    --include "SingletonPattern.java"      \
     --exclude "*"                          \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete            \
