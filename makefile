@@ -105,6 +105,8 @@ sync:
     --include "ThetaJoinT.py"              \
     --include "NaturalJoin.py"             \
     --include "NaturalJoinT.py"            \
+    --include "Decorators.py"              \
+    --include "SingletonPattern.py"        \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \
@@ -175,6 +177,7 @@ sync:
     --include "MethodOverriding2.java"     \
     --include "DynamicBinding.java"        \
     --include "StrategyPattern7.java"      \
+    --include "StrategyPattern8.java"      \
     --exclude "*"                          \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete            \

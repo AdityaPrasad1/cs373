@@ -59,7 +59,9 @@ PFILES :=                   \
     RegExps                 \
     CrossJoinT              \
     ThetaJoinT              \
-    NaturalJoinT
+    NaturalJoinT            \
+    Decorators              \
+    SingletonPattern
 
 %.jsx: %.js
 	-jshint $<
