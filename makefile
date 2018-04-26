@@ -177,6 +177,7 @@ sync:
     --include "MethodOverriding2.java"     \
     --include "DynamicBinding.java"        \
     --include "StrategyPattern7.java"      \
+    --include "Reflection.java"            \
     --include "StrategyPattern8.java"      \
     --exclude "*"                          \
     ../../examples/java/ examples

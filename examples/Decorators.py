@@ -22,14 +22,14 @@ def test1 () :
 
 
 
-def debug_function (g) :
-    def h (n) :
-        print(g.__name__, ":", end=" ")
+def debug_function (f) :
+    def g (n) :
+        print(f.__name__, ":", end=" ")
         print("input =", n, ";", end=" ")
-        m = g(n)
+        m = f(n)
         print("output =", m, ";")
         return m
-    return h
+    return g
 
 @debug_function
 def f2 (n) :
@@ -43,13 +43,13 @@ def test2 () :
 
 
 class debug_class :
-    def __init__ (self, g) :
-        self.g = g
+    def __init__ (self, f) :
+        self.f = f
 
     def __call__ (self, n) :
-        print(self.g.__name__, ":", end=" ")
+        print(self.f.__name__, ":", end=" ")
         print("input =", n, ";", end=" ")
-        m = self.g(n)
+        m = self.f(n)
         print("output =", m, ";")
         return m
 
